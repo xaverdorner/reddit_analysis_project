@@ -1,0 +1,14 @@
+# all csv-files
+*.csv
+
+# password file
+config.py
+
+# that DS store thing
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# cache
+__pycache__/
