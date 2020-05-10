@@ -60,7 +60,8 @@ def subreddit_authors(data_frame):
             else:
                 # creating a first entry if the author is not yet in the dict
                 author_dict[str(comment.author)] = [1, comment.score]
-    return author_dict
+    author_frame = pd.DataFrame(author_dict, index=['num_comments', 'sum_karma']).transpose()
+    return author_frame
 
 # a function to scrape the detailed data of the top 25 weekly redditors
 
@@ -76,7 +77,8 @@ def top_redditor_scraper(redditor_list):
             detail_dict[author] = [created, link_karma, comment_karma]
         except:
             detail_dict[author] = [None, None, None]
-    return detail_dict
+    detail_frame = pd.DataFrame(detail_dict, index=['created', 'link_karma', 'comment_karma'])
+    return detail_frame
 
 # Subreddit & submission analysis: most popular submissions, all comments from an author
 
