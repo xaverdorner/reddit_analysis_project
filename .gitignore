@@ -1,7 +1,7 @@
 # all csv-files
 *.csv
 
-# password file
+# login file
 config.py
 
 # that DS store thing
@@ -12,3 +12,6 @@ config.py
 
 # cache
 __pycache__/
+
+# prototyping notebook 
+reddit_analysis_prototyping.ipynb
